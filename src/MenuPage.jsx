@@ -15,7 +15,7 @@ export default function MenuSection() {
             title: "Cut",
             items: [
                 { name: "カット", price: "¥2,750", desc: "全体のヘアカット。スタイルチェンジや整えに。\n※シャンプー&ブロー込み" },
-                { name: "カット（小学生）", price: "¥1,650", desc: "全体のヘアカット。スタイルチェンジや整えに。\n※シャンプー&ブロー込み" },
+                { name: "カット（幼児・小学生）", price: "¥1,650", desc: "全体のヘアカット。スタイルチェンジや整えに。\n※シャンプー&ブロー込み" },
                 { name: "カット（中学生・高校生）", price: "¥2,200", desc: "全体のヘアカット。スタイルチェンジや整えに。\n※シャンプー&ブロー込み" },
                 { name: "前髪カット", price: "¥550", desc: "前髪のみのカット。お手軽メンテナンスにおすすめ。" },
             ],
@@ -23,7 +23,7 @@ export default function MenuSection() {
         {
             title: "Color",
             items: [
-                { name: "グレーリタッチ", price: "¥2,750", desc: "白髪部分のみを自然にカラーリング。\n※シャンプー&ブロー込み" },
+                { name: "グレイリタッチ", price: "¥2,750", desc: "白髪部分のみを自然にカラーリング。\n※シャンプー&ブロー込み" },
                 { name: "カラーリタッチ", price: "¥3,300", desc: "根元のカラーを整え、色をキープ。\n※シャンプー&ブロー込み" },
                 { name: "グレイカラーフル（ショート）", price: "¥3,300", desc: "顎までのショートヘアに対する白髪染め全体カラー。\n※シャンプー&ブロー込み" },
                 { name: "カラーフル（ショート）", price: "¥3,850", desc: "顎までのショートヘア全体を均一にカラーリング。\n※シャンプー&ブロー込み" },
@@ -87,18 +87,23 @@ export default function MenuSection() {
             items: [
                 {
                     name: "カット＋カラー",
-                    price: "¥5,500",
-                    desc: "カットとカラーのセット。\n※シャンプー＆ブロー込み"
+                    price: "¥4,950～",
+                    desc: "カットとカラーのセットメニュー。\n髪の長さによって料金が変動いたします。\n※シャンプー＆ブロー込み"
+                },
+                {
+                    name: "カット＋グレーカラー",
+                    price: "¥5,000～",
+                    desc: "カットとグレイカラー（白髪染め）のセットメニュー。\n髪の長さによって料金が変動いたします。\n※シャンプー＆ブロー込み"
                 },
                 {
                     name: "カット＋パーマ",
-                    price: "¥6,600",
-                    desc: "カットとナチュラルパーマのセット。\n※シャンプー＆ブロー込み"
+                    price: "¥8,800",
+                    desc: "カットとパーマのセットメニュー。\n※シャンプー＆ブロー込み"
                 },
                 {
-                    name: "カット＋ヘッドスパ",
-                    price: "¥5,000",
-                    desc: "カットとリラックススパのセット。\n※カウンセリング付き"
+                    name: "カット＋ストレートパーマ",
+                    price: "¥13,200",
+                    desc: "カットとストレートパーマのセットメニュー。\n※シャンプー＆ブロー込み"
                 },
             ]
         }
@@ -112,9 +117,9 @@ export default function MenuSection() {
             style={{ backgroundImage: `url(${backgroundImage})` }}
         >
             <div className="max-w-4xl mx-auto text-gray-800">
-                <h2 className="text-4xl font-dancing font-semibold text-center mt-12 mb-6">Menu</h2>
+                <h2 className="text-4xl font-dancing font-semibold text-center mt-12 mb-16">Menu</h2>
 
-                <div className="flex justify-center space-x-4 mb-12">
+                <div className="flex justify-center space-x-4 mb-4">
                     <button
                         onClick={() => setMenuType('single')}
                         className={`px-6 py-2 border rounded-full font-serifjp transition
