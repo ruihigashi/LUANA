@@ -2,7 +2,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 import background from "../assets/Images/white.jpg"
-import Menu from "../assets/Images/menu.jpg"
+import Menu from "../assets/Images/menuCard.jpg"
 import { Link } from "react-router-dom";
 
 

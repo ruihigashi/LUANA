@@ -4,12 +4,13 @@ import backgroundImage from "./assets/Images/white.jpg";
 
 export default function MenuSection() {
     const [openSection, setOpenSection] = useState(null);
+    const [menuType, setMenuType] = useState('single');
 
     const toggleSection = (section) => {
         setOpenSection(openSection === section ? null : section);
     };
 
-    const menuData = [
+    const singleMenus = [
         {
             title: "Cut",
             items: [
@@ -79,14 +80,58 @@ export default function MenuSection() {
         },
     ];
 
+
+    const setMenus = [
+        {
+            title: "Set Menu",
+            items: [
+                {
+                    name: "カット＋カラー",
+                    price: "¥5,500",
+                    desc: "カットとカラーのセット。\n※シャンプー＆ブロー込み"
+                },
+                {
+                    name: "カット＋パーマ",
+                    price: "¥6,600",
+                    desc: "カットとナチュラルパーマのセット。\n※シャンプー＆ブロー込み"
+                },
+                {
+                    name: "カット＋ヘッドスパ",
+                    price: "¥5,000",
+                    desc: "カットとリラックススパのセット。\n※カウンセリング付き"
+                },
+            ]
+        }
+    ];
+
+    const displayedMenu = menuType === 'single' ? singleMenus : setMenus;
+
     return (
         <section
             className="min-h-screen bg-repeat bg-center bg-fixed bg-no-repeat bg-cover py-20 px-6 md:px-12"
             style={{ backgroundImage: `url(${backgroundImage})` }}
         >
             <div className="max-w-4xl mx-auto text-gray-800">
-                <h2 className="text-4xl font-dancing font-semibold text-center mt-12 mb-16">Menu</h2>
-                {menuData.map((section, index) => (
+                <h2 className="text-4xl font-dancing font-semibold text-center mt-12 mb-6">Menu</h2>
+
+                <div className="flex justify-center space-x-4 mb-12">
+                    <button
+                        onClick={() => setMenuType('single')}
+                        className={`px-6 py-2 border rounded-full font-serifjp transition
+              ${menuType === 'single' ? 'bg-gray-800 text-white' : 'bg-white text-gray-800 border-gray-400'}`}
+                    >
+                        Single
+                    </button>
+                    <button
+                        onClick={() => setMenuType('set')}
+                        className={`px-6 py-2 border rounded-full font-serifjp transition
+              ${menuType === 'set' ? 'bg-gray-800 text-white' : 'bg-white text-gray-800 border-gray-400'}`}
+                    >
+                        Set
+                    </button>
+                </div>
+
+                {displayedMenu.map((section, index) => (
                     <div key={index} className={`mb-4 ${openSection === index ? '' : 'border-b border-gray-400'}`}>
                         <div
                             className="flex justify-between items-center cursor-pointer py-6"
@@ -102,10 +147,8 @@ export default function MenuSection() {
 
                         <div
                             className={`transition-all duration-700 ease-in-out overflow-hidden 
-                ${openSection === index ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
-                                }`}
+                ${openSection === index ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}`}
                         >
-
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-24 pb-10 px-6">
                                 {section.items.map((item, idx) => (
                                     <div key={idx} className="flex flex-col justify-between min-h-[110px] space-y-2 mt-2">
@@ -118,18 +161,14 @@ export default function MenuSection() {
                                                 {item.desc}
                                             </p>
                                         </div>
-
                                         <hr className="border-gray-400" />
                                     </div>
                                 ))}
-
                             </div>
                         </div>
                     </div>
                 ))}
-
             </div>
         </section>
     );
 }
-

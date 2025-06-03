@@ -43,7 +43,7 @@ export default function Header() {
     <>
       <header className="fixed top-0 left-0 w-full z-50 bg-white shadow-md transition-all duration-300">
 
-        <div className="max-w-7xl mx-auto px-8 py-3 flex justify-between items-center">
+        <div className="max-w-7xl mx-auto px-5 py-3 flex justify-between items-center">
           {/* ロゴ */}
           <div onClick={handleClick} className=" flex flex-col items-center text-center cursor-pointer">
             <p className="text-xs text-gray-500 tracking-widest font-great">Hair Salon</p>
