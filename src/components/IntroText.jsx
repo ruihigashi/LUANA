@@ -114,7 +114,7 @@ export default function IntroText() {
         {menuData.map((menu, index) => (
           <div
             key={index}
-            className="p-7 bg-cover bg-no-repeat bg-center rounded-xl shadow-2xl border border-blue-200 backdrop-blur-sm"
+            className="p-7 bg-cover bg-no-repeat bg-center rounded-xl shadow-2xl backdrop-blur-sm"
             style={{ backgroundImage: `url(${Menu})` }}
           >
             <div className="mb-10">
