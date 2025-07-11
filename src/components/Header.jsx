@@ -133,15 +133,15 @@ export default function Header() {
             <p className="text-sm text-gray-300 mt-1">MIYAZAKI</p>
           </div>
 
-          {/* Instagramリンク */}
-          <a
+          {/* Instagramリンク削除 */}
+          {/* <a
             href="https://www.instagram.com/your_instagram_id"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white hover:text-blue-300 text-5xl"
           >
             <FaInstagram />
-          </a>
+          </a> */}
         </div>
 
 
