@@ -1,8 +1,11 @@
 <div id="top"></div>
 
 # Luana
+これは母が個人で営む美容室の公式ウェブサイトです。
+<img width="1920" height="5074" alt="screencapture-luana-s-miruto-netlify-app-2025-10-28-12_45_46" src="https://github.com/user-attachments/assets/2da8b820-1f09-4e1e-8cd5-1fc0cf9281c9" />
 
-これは美容室のウェブサイトのフロントエンドリポジトリです。
+## サイトリンク
+https://luana-s-miruto.netlify.app/
 
 ## 使用技術一覧
 
