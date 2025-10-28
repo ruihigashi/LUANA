@@ -27,7 +27,7 @@ https://luana-s-miruto.netlify.app/
 
 ## プロジェクトについて
 
-このプロジェクトは、ReactとTailwind CSSを使用して構築された、美容室「Luana」のウェブサイトです。
+このプロジェクトは、ReactとTailwind CSSを使用して構築された、美容室「Luana・S・Miruto」のウェブサイトです。
 
 <p align="right">(<a href="#top">トップへ</a>)</p>
 
